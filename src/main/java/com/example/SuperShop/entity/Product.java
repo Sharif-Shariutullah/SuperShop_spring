@@ -21,19 +21,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class product{
+public class Product {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productID;
     private String proName;
-    private String ProDescriptive;
+    private String proDescriptive;
     private Long proStock;
     private String proBarcode;
-    private Long CostPrice;
-    private Long SellingPrice;
+    private Long costPrice;
+    private Long sellingPrice;
     private boolean status;
-
 
 
     private String createdBY;

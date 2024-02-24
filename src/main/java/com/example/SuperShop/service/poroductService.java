@@ -1,7 +1,7 @@
 package com.example.SuperShop.service;
 
 
-import com.example.SuperShop.entity.product;
+import com.example.SuperShop.entity.Product;
 import com.example.SuperShop.repository.productRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ public class poroductService {
 
 //  to see Data
 
-    public List<product> getAllData() {
+    public List<Product> getAllData() {
 
         return repo.findAll();
     }
@@ -25,7 +25,7 @@ public class poroductService {
 
 // save data
 
-    public product save(product product) {
+    public Product save(Product product) {
         return repo.save(product);
     }
 
@@ -40,7 +40,7 @@ public class poroductService {
 
 //    get Data By ID
 
-    public product getDataByID(Long id) {
+    public Product getDataByID(Long id) {
 
         return repo.findById(id).get();
     }
@@ -50,7 +50,7 @@ public class poroductService {
 
     // Update
 
-    public product update(Long id, product product) {
+    public Product update(Long id, Product product) {
         product.setProductID(id);
 
         return repo.save(product);

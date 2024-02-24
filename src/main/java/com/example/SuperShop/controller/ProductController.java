@@ -1,6 +1,6 @@
 package com.example.SuperShop.controller;
 
-import com.example.SuperShop.entity.product;
+import com.example.SuperShop.entity.Product;
 import com.example.SuperShop.service.poroductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -77,7 +77,7 @@ public class ProductController {
 
 // save
     @PostMapping("/add")
-    public ResponseEntity<?> save(@RequestBody product product) {
+    public ResponseEntity<?> save(@RequestBody Product product) {
 
         return ResponseEntity.ok(service.save(product));
     }    ;
@@ -93,7 +93,7 @@ public class ProductController {
 
     //Update
     @PutMapping("/{id}")
-    public ResponseEntity<?> Update(@PathVariable("id") Long id, @RequestBody product product) {
+    public ResponseEntity<?> Update(@PathVariable("id") Long id, @RequestBody Product product) {
 
           return ResponseEntity.ok(service.update(id, product));
     } ;

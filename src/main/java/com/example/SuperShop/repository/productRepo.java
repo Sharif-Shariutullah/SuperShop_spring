@@ -1,12 +1,12 @@
 package com.example.SuperShop.repository;
 
-import com.example.SuperShop.entity.product;
+import com.example.SuperShop.entity.Product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface productRepo extends JpaRepository<product, Long> {
+public interface productRepo extends JpaRepository<Product, Long> {
 
 
 
